@@ -1,14 +1,21 @@
-specVersion: 0.2.0
+specVersion: 1.0.0
 name: statemint-subql-starter
 version: 0.0.4
+runner:
+  node:
+    name: '@subql/node'
+    version: '*'
+  query:
+    name: '@subql/query'
+    version: '*'
 description: This project can be use as a starting point for statemint network.
-repository: https://github.com/subquery/statemint-subql-starter
+repository: 'https://github.com/subquery/statemint-subql-starter'
 schema:
   file: ./schema.graphql
 network:
-  endpoint: wss://statemint.api.onfinality.io/public-ws
-  genesisHash: '0x68d56f15f85d3136970ec16946040bc1752654e906147f7e43e9d539d7c3de2f'
-  dictionary: https://api.subquery.network/sq/subquery/statemint-dictionary
+  chainId: '0x68d56f15f85d3136970ec16946040bc1752654e906147f7e43e9d539d7c3de2f'
+  endpoint: 'wss://statemint.api.onfinality.io/public-ws'
+  dictionary: 'https://api.subquery.network/sq/subquery/statemint-dictionary'
 dataSources:
   - kind: substrate/Runtime
     startBlock: 1
